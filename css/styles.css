@@ -1,0 +1,132 @@
+
+h1 {
+    margin: 50px auto 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90px;
+    color: #C9EFC7;
+    line-height: 2;
+    padding: 100px;
+  }
+  
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding-top: 16px;
+    font-size: 2.5rem;
+    color: #C9EFC7;
+    font-weight: normal;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  
+  h3 {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #4D7E3E;
+  }
+  
+  p {
+    margin: 0;
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
+  
+  body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    font-size: 1.2rem;
+    color: #40514E
+  }
+  
+  a {
+    color: #11999E;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  hr{
+    border: 10px dotted #EAF6F6;
+    border-style: none none dotted;
+    color: #EAF6F6;
+    background-color: white;
+    width: 100px;
+    margin: 50px auto 50px auto;
+  }
+  
+  
+  
+  /******* CLASS SELECTORS ********/
+  .top {
+    background-color: #4D7E3E;
+    margin-top: 0;
+    border: 10px;
+    padding: 20px;
+  }
+  
+  .skills {
+    background-color: #C9EFC7;
+    margin-top: 0;
+  }
+
+  .intro-row {
+    max-width: 50%;
+    text-align: left;
+    margin: auto;
+  }
+
+  .skill-row {
+    max-width: 50%;
+    margin: auto;
+    text-align: left;
+    line-height: 2;
+    padding-bottom: 100px;
+  }
+  
+  .dog_img {
+    border-radius: 0%;
+    width: 15%;
+    float: left;
+    margin-right: 30px;
+  }
+  
+  .food_img {
+    border-radius: 0%;
+    width: 15%;
+    float: right;
+    margin-left: 30px;
+  }
+  
+  .collar_img {
+    border-radius: 50%;
+    width: 25%;
+  }
+  
+  .contact-me {
+    background-color: #C9EFC7;
+    line-height: 2;
+    color: #4D7E3E;
+  
+  }
+  
+  .bottom {
+    background-color: #4D7E3E;
+    line-height: 3;
+    font-size: 0.8rem;
+  }
+  
+  .pro {
+    text-decoration: underline;
+  }
+  
+
+  .h1-primary {
+    color: #4D7E3E;
+  }
+  
+  .h2-primary {
+    color: #4D7E3E;
+  }
