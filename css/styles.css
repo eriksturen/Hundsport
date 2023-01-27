@@ -5,7 +5,6 @@ h1 {
     font-size: 90px;
     color: #C9EFC7;
     line-height: 2;
-    padding: 100px;
   }
   
   h2 {
@@ -16,7 +15,6 @@ h1 {
     color: #C9EFC7;
     font-weight: normal;
     padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
   }
   
   h3 {
@@ -49,12 +47,12 @@ h1 {
   }
   
   hr{
-    border: 10px dotted #EAF6F6;
+    border: 10px dotted #4D7E3E;
     border-style: none none dotted;
-    color: #EAF6F6;
-    background-color: white;
-    width: 100px;
-    margin: 50px auto 50px auto;
+    color: #4D7E3E;
+    width: 200px;
+    padding: 50px;
+    margin: 0px auto 50px auto;
   }
   
   
@@ -88,7 +86,7 @@ h1 {
   
   .dog_img {
     border-radius: 0%;
-    width: 15%;
+    width: 20%;
     float: left;
     margin-right: 30px;
   }
@@ -101,8 +99,11 @@ h1 {
   }
   
   .collar_img {
-    border-radius: 50%;
-    width: 25%;
+    border-radius: 0%;
+    width: 15%;
+    float: left;
+    margin-right: 30px;
+
   }
   
   .contact-me {
