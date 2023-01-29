@@ -8,6 +8,8 @@
   --mainGrey: #ececec;
   --mainSpacing: 0.1rem;
   --mainTransition: all 0.3s linear;
+  --topDarkGradient: linear-gradient(var(--primaryColor), var(--primaryLight));
+  --topLightGradient: linear-gradient(var(--primaryLight), var(--primaryColor))
 }
 
 * {
@@ -18,7 +20,7 @@ h1 {
   margin: 50px auto 0 auto;
   font-family: 'Montserrat', sans-serif;
   font-size: 90px;
-  color: var(--primaryLight);
+  color: var(--mainBlack);
   line-height: 2;
 }
 
@@ -27,7 +29,7 @@ h2 {
   margin: 0;
   padding-top: 16px;
   font-size: 2.5rem;
-  color: var(--primaryLight);
+  color: var(--mainBlack);
   font-weight: normal;
   padding-top: 2.5rem;
 }
@@ -36,7 +38,7 @@ h3 {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  color: #4D7E3E;
+  color: var(--mainBlack);
 }
 
 p {
@@ -50,12 +52,7 @@ body {
   text-align: center;
   font-family: 'Merriweather', serif;
   font-size: 1.2rem;
-  color: #40514E
-}
-
-a {
-  color: #11999E;
-  text-decoration: none;
+  color: var(--mainBlack);
 }
 
 a:hover {
@@ -65,7 +62,7 @@ a:hover {
 hr {
   border: 10px dotted var(--primaryColor);
   border-style: none none dotted;
-  color: #4D7E3E;
+  color: var(--mainBlack);
   width: 200px;
   padding: 50px;
   margin: 0px auto 50px auto;
@@ -74,6 +71,10 @@ hr {
 
 
 /******* CLASS SELECTORS ********/
+.title-img {
+  align-items: center;
+}
+
 .top {
   background-color: var(--primaryColor);
   margin-top: 0;
@@ -84,6 +85,8 @@ hr {
 .skills {
   background-color: var(--primaryLight);
   margin-top: 0;
+  background-image: url("/images/stacked-waves-top-dark.svg");
+  background-size: cover;
 }
 
 .intro-row {
@@ -124,6 +127,8 @@ hr {
 
 .contact-me {
   background-color: var(--primaryLight);
+  background-image: url("/images/wave-haikei.svg");
+  background-size: cover;
   line-height: 2;
   color: var(--primaryColor);
 
@@ -141,9 +146,10 @@ hr {
 
 
 .h1-primary {
-  color: var(--primaryColor);
+  color: var(--mainBlack);
 }
 
 .h2-primary {
-  color: var(--primaryColor);
+  color: var(--mainBlack);
+  padding: 3rem 0;
 }
