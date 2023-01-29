@@ -1,133 +1,149 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root {
+  --primaryColor: #4D7E3E;
+  --primaryLight: #C9EFC7;
+  --mainWhite: #fff;
+  --mainBlack: #222222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+
+* {
+  font-family: 'Lato', sans-serif;
+}
 
 h1 {
-    margin: 50px auto 0 auto;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 90px;
-    color: #C9EFC7;
-    line-height: 2;
-  }
-  
-  h2 {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding-top: 16px;
-    font-size: 2.5rem;
-    color: #C9EFC7;
-    font-weight: normal;
-    padding-top: 2.5rem;
-  }
-  
-  h3 {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #4D7E3E;
-  }
-  
-  p {
-    margin: 0;
-    padding-top: 8px;
-    padding-bottom: 16px;
-  }
-  
-  body {
-    margin: 0;
-    text-align: center;
-    font-family: 'Merriweather', serif;
-    font-size: 1.2rem;
-    color: #40514E
-  }
-  
-  a {
-    color: #11999E;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  hr{
-    border: 10px dotted #4D7E3E;
-    border-style: none none dotted;
-    color: #4D7E3E;
-    width: 200px;
-    padding: 50px;
-    margin: 0px auto 50px auto;
-  }
-  
-  
-  
-  /******* CLASS SELECTORS ********/
-  .top {
-    background-color: #4D7E3E;
-    margin-top: 0;
-    border: 10px;
-    padding: 20px;
-  }
-  
-  .skills {
-    background-color: #C9EFC7;
-    margin-top: 0;
-  }
+  margin: 50px auto 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 90px;
+  color: var(--primaryLight);
+  line-height: 2;
+}
 
-  .intro-row {
-    max-width: 50%;
-    text-align: left;
-    margin: auto;
-  }
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-top: 16px;
+  font-size: 2.5rem;
+  color: var(--primaryLight);
+  font-weight: normal;
+  padding-top: 2.5rem;
+}
 
-  .skill-row {
-    max-width: 50%;
-    margin: auto;
-    text-align: left;
-    line-height: 2;
-    padding-bottom: 100px;
-  }
-  
-  .dog_img {
-    border-radius: 0%;
-    width: 20%;
-    float: left;
-    margin-right: 30px;
-  }
-  
-  .food_img {
-    border-radius: 0%;
-    width: 15%;
-    float: right;
-    margin-left: 30px;
-  }
-  
-  .collar_img {
-    border-radius: 0%;
-    width: 15%;
-    float: left;
-    margin-right: 30px;
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #4D7E3E;
+}
 
-  }
-  
-  .contact-me {
-    background-color: #C9EFC7;
-    line-height: 2;
-    color: #4D7E3E;
-  
-  }
-  
-  .bottom {
-    background-color: #4D7E3E;
-    line-height: 3;
-    font-size: 0.8rem;
-  }
-  
-  .pro {
-    text-decoration: underline;
-  }
-  
+p {
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 16px;
+}
 
-  .h1-primary {
-    color: #4D7E3E;
-  }
-  
-  .h2-primary {
-    color: #4D7E3E;
-  }
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 1.2rem;
+  color: #40514E
+}
+
+a {
+  color: #11999E;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: 10px dotted var(--primaryColor);
+  border-style: none none dotted;
+  color: #4D7E3E;
+  width: 200px;
+  padding: 50px;
+  margin: 0px auto 50px auto;
+}
+
+
+
+/******* CLASS SELECTORS ********/
+.top {
+  background-color: var(--primaryColor);
+  margin-top: 0;
+  border: 10px;
+  padding: 20px;
+}
+
+.skills {
+  background-color: var(--primaryLight);
+  margin-top: 0;
+}
+
+.intro-row {
+  max-width: 50%;
+  text-align: left;
+  margin: auto;
+}
+
+.skill-row {
+  max-width: 50%;
+  margin: auto;
+  text-align: left;
+  line-height: 2;
+  padding-bottom: 100px;
+}
+
+.dog_img {
+  border-radius: 0%;
+  width: 20%;
+  float: left;
+  margin-right: 30px;
+}
+
+.food_img {
+  border-radius: 0%;
+  width: 15%;
+  float: right;
+  margin-left: 30px;
+}
+
+.collar_img {
+  border-radius: 0%;
+  width: 15%;
+  float: left;
+  margin-right: 30px;
+
+}
+
+.contact-me {
+  background-color: var(--primaryLight);
+  line-height: 2;
+  color: var(--primaryColor);
+
+}
+
+.bottom {
+  background-color: var(--primaryColor);
+  line-height: 3;
+  font-size: 0.8rem;
+}
+
+.pro {
+  text-decoration: underline;
+}
+
+
+.h1-primary {
+  color: var(--primaryColor);
+}
+
+.h2-primary {
+  color: var(--primaryColor);
+}
