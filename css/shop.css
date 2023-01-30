@@ -13,7 +13,7 @@
 
 .shop-title {
     background-color: var(--primaryLight);
-    padding-left: 200px;
+    margin-top: -60px;
 }
 
 .shop-main {
