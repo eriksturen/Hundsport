@@ -32,7 +32,7 @@
 //     console.log(cars[i]);
 // }
 
-const products = [["Köttfärd", "/images/bone.svg"], ["Bitkudde", "/images/DogProfile.svg"], ["Koppel", "/images/dog-collar.svg"]];
+const products = [["Köttfärs", "/images/DogProfile.svg"], ["Bitkudde", "/images/DogProfile.svg"], ["Koppel", "/images/dog-collar.svg"], ["Storpack märgben", "/images/DogProfile.svg"], ["Tennisboll", "/images/DogProfile.svg"], ["Lyftsele", "/images/dog-collar.svg"], ["leversnittar", "/images/DogProfile.svg"], ["Gummigris", "/images/DogProfile.svg"], ["Kamerasele", "/images/dog-collar.svg"]];
 const list = document.getElementById("shopProducts");
 
 // for (i = 0; i < products.length; i++) {

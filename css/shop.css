@@ -10,7 +10,10 @@
     --mainTransition: all 0.3s linear;
 }
 
-
+.card {
+    min-height: 321px;
+    max-height: 321px;
+}
 
 .shop-title {
     background-color: var(--primaryLight);
@@ -27,13 +30,13 @@
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 3rem;
 }
 
 
 .shop-footer {
     background-color: var(--primaryColor);
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
@@ -346,7 +349,3 @@ body {
 }
 
 /* --------------- End of Cart ---------------- */
-
-.card-img-top-small {
-    width: 50%;
-}
