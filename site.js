@@ -32,7 +32,7 @@
 //     console.log(cars[i]);
 // }
 
-const products = ["hundmat", "kötffärs", "koppel"];
+const products = [["Köttfärd", "/images/bone.svg"], ["Bitkudde", "/images/DogProfile.svg"], ["Koppel", "/images/dog-collar.svg"]];
 const list = document.getElementById("shopProducts");
 
 // for (i = 0; i < products.length; i++) {
@@ -41,33 +41,28 @@ const list = document.getElementById("shopProducts");
 //     list.appendChild(li);
 // };
 
+// for (i = 0; i < products.length; i++) {
+//     const li = document.createElement("li");
+//     li.innerText = products[i];
+//     list.appendChild(li);
+// };
+
+const cardList = document.getElementById("shopProductsCards");
 for (i = 0; i < products.length; i++) {
-    const li = document.createElement("li");
-    li.innerText = products[i];
-    list.appendChild(li);
-};
+    const card = document.createElement("div");
+    card.innerHTML = `
+        <div class="card mx-auto d-block" style="width: 18rem;">
+            <img src=${products[i][1]} class="card-img-top" style="width:50%;" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${products[i][0]}</h5>
+                <p class="card-text">This is a product card <br> 
+                    It describes the product
+                </p>
+                <a href="#" class="btn btn-primary">Add to cart</a>
+            </div>
+        </div>
+  `
+    cardList.appendChild(card);
+}
 
-// var items = [
-//     ['Logitek', 'Rp 60.000,00', 'Logitek Keyboard', 'logitek.jpeg'],
-//     ['MSI', 'Rp 300.000,00', 'MSI Keyboard', 'msi.jpeg'],
-//     ['Genius', 'Rp 50.000,00', 'Genius Mouse', 'genius.jpeg'],
-//     ['Jerry', 'Rp 30.000,00', 'Jerry Mouse', 'jerry.jpeg']
-// ]
-
-// let content = '';
-
-// items.forEach(p => {
-//     content += `
-//       <div id="keyBoard" class="col-md-4 mt-2">
-//                 <div class="card" style="width: 18rem;">
-//                     <img src="${p[3]}" class="card-img-top img-fluid" alt="keyboard">
-//                     <div class="card-body">
-//                         <h5 class="card-title" id="itemName">${p[0]}</h5>
-//                         <p class="card-text" id="itemDesc">${p[2]}</p>
-//                         <p class="card-text">${p[1]}</p>
-//                         <a href="#" class="btn btn-primary" id="addCart">Add to cart</a>
-//                     </div>
-//                 </div>
-//             </div>
-//     `
-// });
+console.log(cardList);
