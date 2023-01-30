@@ -10,10 +10,7 @@
     --mainTransition: all 0.3s linear;
 }
 
-.card {
-    min-height: 321px;
-    max-height: 321px;
-}
+
 
 .shop-title {
     background-color: var(--primaryLight);
@@ -26,13 +23,6 @@
     background-size: cover;
     min-height: 2000px;
 }
-
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-}
-
 
 .shop-footer {
     background-color: var(--primaryColor);
@@ -82,13 +72,17 @@ body {
     width: 100%;
     display: flex;
     align-items: center;
-    background: var(--mainWhite);
+    background: rgba(77, 126, 62, 0.5);
     z-index: 1;
+}
+
+.navbar-light {
+    background: rgba(201, 239, 199, 0.5);
 }
 
 .navbar-center {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     align-items: center;

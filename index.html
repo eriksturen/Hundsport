@@ -11,6 +11,7 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/sidebar.css">
+  <link rel="stylesheet" href="css/shop.css">
 </head>
 
 
@@ -20,13 +21,21 @@
     integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
     crossorigin="anonymous"></script>
 
-  <!-- The sidebar -->
-  <div class="sidebar">
-    <a class="active" href="index.html">Hem</a>
-    <a href="shop.html">Webshop</a>
-    <a href="contact.html">Om Oss</a>
+  <div class="navbar navbar-light">
+    <div class="navbar-center">
+      <a class="active" href="index.html">Hem</a>
+      <a href="shop.html">Webshop</a>
+      <a href="contact.html">Om Oss</a>
+      <div class="cart-btn">
+        <span class="nav-icon">
+          <i class="fa fa-cart-plus" aria-hidden="true"></i>
+          <div class="cart-items">0</div>
+        </span>
+      </div>
+    </div>
   </div>
 
+  <!-- The sidebar -->
   <div class="content">
     <div class="top">
       <img src="branding/logo/png/logo-color.png" alt="https://freesvg.org/img/1538154274.png">
@@ -35,30 +44,52 @@
     <div class="skills">
       <div class="intro-row">
         <br>
-        <h2 class="h2-primary">Vi har allt för den arbetande och tävlande hunden</h2>
+        <div class="container">
+          <div class="card mx-auto d-block text-center title-card">
+            <h2>Utrustning för brukshundar</h2>
+            <br>
+            <h3>Pålitliga och högkvalitativa produkter för arbetande hundar</h3>
+          </div>
+        </div>
       </div>
 
       <!-- Three divs with info categories: -->
-      <div class="skill-row">
-        <img class="dog_img" src="images/DogProfile.svg" alt="https://freesvg.org/img/1538154274.png">
-        <h3>Utrustning</h3>
-        <p>Apportbockar, konor, snitslar och bitkuddar. Vi har allt du behöver för träning och tävling i bruks, agility
-          och IGP.
-        </p>
-      </div>
+      <div class="container">
+        <div class="card-wrapper">
 
-      <div class="skill-row">
-        <img class="food_img" src="images/bone.svg" alt="https://freesvg.org/img/1538154274.png">
-        <h3>Mat och träningsgodis</h3>
-        <p>Rådjurshalsar, kycklinghjärtan och leversnittar. Vi har ett brett utbud av högkvalitativt hundfoder. Allt
-          från torrfoder på storförpackning till fruset färskfoder.</p>
-      </div>
+          <div class="card mx-auto d-block">
+            <h5 class="card-header">Utrustning</h5>
+            <img src="/images/DogProfile.svg" class="card-img-top" style="width:25%;" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Apportbockar, konor, snitslar och bitkuddar.</h4>
+              <p class="card-text">Vi har allt du behöver för träning och tävling i bruks, agility
+                och IGP.</p>
+            </div>
+          </div>
 
-      <div class="skill-row">
-        <img class="collar_img" src="images/dog-collar.svg" alt="https://freesvg.org/img/1538154274.png">
-        <h3>Koppel, selar och halsband</h3>
-        <p>Helikopterlyft, flytvästar och kameraselar. Vi har alla typer av specialselar du kan behöva för räddning,
-          militär och tjänstebruk.</p>
+          <div class="card mx-auto d-block">
+            <h5 class="card-header">Mat och träningsgodis</h5>
+            <img src="/images/DogProfile.svg" class="card-img-top" style="width:25%;" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Rådjurshalsar, kycklinghjärtan och leversnittar.</h4>
+              <p class="card-text">Vi har ett brett utbud av högkvalitativt hundfoder. Allt
+                från torrfoder på storförpackning till fruset färskfoder.</p>
+            </div>
+          </div>
+
+          <div class="card mx-auto d-block">
+            <h5 class="card-header">Utrusning</h5>
+            <img src="/images/DogProfile.svg" class="card-img-top" style="width:25%;" alt="">
+            <div class="card-body">
+              <h4 class="card-title">Koppel, selar och halsband</h4>
+              <p class="card-text">Helikopterlyft, flytvästar och kameraselar. Vi har alla typer av specialselar du kan
+                behöva för räddning,
+                militär och tjänstebruk.</p>
+            </div>
+          </div>
+
+
+        </div>
       </div>
     </div>
 
