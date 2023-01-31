@@ -47,10 +47,10 @@ class UI {
                 <div class="card-body">
                 <h5 class="card-title">${products[i].title}</h5>
                 <p class="card-text">This is a product card <br>
-                     333 kr
+                    ${products[i].price} kr
                  </p>
                     <a href="#" class="btn btn-primary info-btn">Mer info</a>
-                    <a href="#" class="btn btn-primary bag-btn">Lägg i korgen</a>
+                    <button href="#" class="btn btn-primary bag-btn" data=${products[i].id}>Lägg i korgen</button>
                 </div>
                 </div>
             </article>
@@ -58,12 +58,19 @@ class UI {
             productsDOM.appendChild(prod)
         };
 
-        console.log(productsDOM);
+    }
+    getBagButtons() {
+        const buttons = [...document.querySelectorAll(".bag-btn")];
+        for (let i = 0; i < buttons.length; i++) {
+
+        }
     }
 }
-
 // local storage class 
 class Storage {
+    static saveProduct(products) {
+        localStorage.setItem("products", JSON.stringify(products))
+    };
 
 }
 
@@ -72,7 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const products = new Products();
 
     // get all products then pass then off to the ui class which handles displaying correctly
-    products.getProducts().then(products => ui.displayProducts(products));
+    products.getProducts().then(products => {
+        ui.displayProducts(products);
+        Storage.saveProduct(products);
+    }).then(() => {
+        ui.getBagButtons();
+    });
 });
 
 
