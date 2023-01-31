@@ -9,7 +9,7 @@ const cartTotal = document.querySelector('.cart-total');
 const cartContent = document.querySelector('.cart-content');
 const productsDOM = document.querySelector('.products-center');
 
-const productInfoModalBtn = document.querySelector('.product-info-modal-btn');
+const productModal = document.querySelector('.product-info-modal');
 
 // this is main cart variable 
 let cart = [];
@@ -51,8 +51,11 @@ class UI {
                 <p class="card-text">This is a product card <br>
                     ${products[i].price} kr
                  </p>
-                    <a href="#" class="btn btn-primary info-btn">Mer info</a>
-                    
+                    <button type="button" class="btn btn-primary" data-toggle="modal" 
+                    data=${products[i].id} data-target="#exampleModal" 
+                        onclick="createModal(${products[i].id})">
+                        Mer info
+                    </button>
                     <button href="#" class="btn btn-primary bag-btn" data=${products[i].id}>Lägg i korgen</button>
                 </div>
                 </div>
@@ -70,6 +73,34 @@ class UI {
         }
     }
 }
+async function createModal(id) {
+    const productObject = new Products();
+    const products = await productObject.getProducts();
+    productModal.innerHTML = `
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">${products[id].title}</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>${products[id].title}</p>
+                    <p>${products[id].price}</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+                    <button type="button" class="btn btn-primary">Lägg i korgen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    `
+}
+
 // local storage class 
 class Storage {
     static saveProduct(products) {
@@ -90,7 +121,6 @@ document.addEventListener("DOMContentLoaded", () => {
         ui.getBagButtons();
     });
 });
-
 
 
 
