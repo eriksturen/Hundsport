@@ -22,13 +22,13 @@
     <div class="navbar">
         <div class="navbar-center">
             <a href="index.html">Hem</a>
-            <a class="active" href="shop.html">Webshop</a>
+            <a class="active" href="shop.html">Produkter</a>
             <a href="contact.html">Om Oss</a>
             <div class="cart-btn">
                 <span class="nav-icon">
                     <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                    <div class="cart-items">0</div>
                 </span>
+                <div class="cart-items">0</div>
             </div>
         </div>
     </div>
@@ -39,12 +39,46 @@
                 alt="https://freesvg.org/img/1538154274.png">
             <h1 class="h1-shop">Webshop</h1>
         </div>
+
         <div class="shop-main">
             <div class="container">
                 <div class="card-wrapper" id="shopProductsCards"></div>
             </div>
         </div>
 
+        <!-- cart  -->
+        <div class="cart-overlay">
+            <div class="cart">
+                <span class="close-cart">
+                    <i class="fa fa-window-close"></i>
+                </span>
+                <h2>Kundkorg</h2>
+                <div class="cart-content">
+                    <!-- cart item -->
+                    <div class="cart-item">
+                        <img src="/images/DogProfile.svg" alt="">
+                        <div>
+                            <span>Helikoptersele</span>
+                            <h4>333 kr</h4>
+                            <span class="remove-item">Ta bort</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-chevron-up"></i>
+                            <p class="item-amount">1</p>
+                            <i class="fa fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <!-- end of cart item -->
+                </div>
+                <div class="cart-footer">
+                    <h3>Totalpris: </h3><span class="cart-total">0</span>
+                    <h3>kr</h3>
+                    <button class="clear-cart banner-btn">Töm korgen </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- end of cart  -->
     </div>
     <div class="shop-footer">Footer</div>
     </div>
