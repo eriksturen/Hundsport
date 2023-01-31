@@ -9,6 +9,8 @@ const cartTotal = document.querySelector('.cart-total');
 const cartContent = document.querySelector('.cart-content');
 const productsDOM = document.querySelector('.products-center');
 
+const productInfoModalBtn = document.querySelector('.product-info-modal-btn');
+
 // this is main cart variable 
 let cart = [];
 
@@ -50,12 +52,14 @@ class UI {
                     ${products[i].price} kr
                  </p>
                     <a href="#" class="btn btn-primary info-btn">Mer info</a>
+                    
                     <button href="#" class="btn btn-primary bag-btn" data=${products[i].id}>Lägg i korgen</button>
                 </div>
                 </div>
             </article>
             `
             productsDOM.appendChild(prod)
+            // send products[i].id to a function that creates a modal with more info about that product, hook that up to the ShowModalButton somehow
         };
 
     }
