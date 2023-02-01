@@ -5,8 +5,9 @@
                 "id": "0"
             },
             "fields": {
-                "title": "queen panel bed",
+                "title": "Köttfärs på tunna",
                 "price": 10.99,
+                "description": "Stor tunna med prima köttfärs. Mängdrabatt!",
                 "image": {
                     "fields": {
                         "file": {
@@ -21,8 +22,9 @@
                 "id": "1"
             },
             "fields": {
-                "title": "king panel bed",
+                "title": "Röd kong",
                 "price": 12.99,
+                "description": "Vanlig röd kong. Klipp i bitar för specialsöket.",
                 "image": {
                     "fields": {
                         "file": {
@@ -37,8 +39,9 @@
                 "id": "2"
             },
             "fields": {
-                "title": "single panel bed",
+                "title": "Bitkudde",
                 "price": 12.99,
+                "description": "Bitkudde från gappay i jute.",
                 "image": {
                     "fields": {
                         "file": {
@@ -53,8 +56,9 @@
                 "id": "3"
             },
             "fields": {
-                "title": "twin panel bed",
+                "title": "Halsband",
                 "price": 22.99,
+                "description": "Läderhalsband för mellanstora hundar.",
                 "image": {
                     "fields": {
                         "file": {
@@ -69,8 +73,9 @@
                 "id": "4"
             },
             "fields": {
-                "title": "fridge",
+                "title": "Långt koppel",
                 "price": 88.99,
+                "description": "Extra långt koppel i syntet",
                 "image": {
                     "fields": {
                         "file": {
@@ -85,8 +90,9 @@
                 "id": "5"
             },
             "fields": {
-                "title": "dresser",
+                "title": "Kort koppel",
                 "price": 32.99,
+                "description": "Kortare syntetkoppel, smidigt i stan.",
                 "image": {
                     "fields": {
                         "file": {
@@ -101,8 +107,9 @@
                 "id": "6"
             },
             "fields": {
-                "title": "couch",
+                "title": "Kycklinghals",
                 "price": 45.99,
+                "description": "Frysta kycklinghalsar. Mycket populärt stödfoder.",
                 "image": {
                     "fields": {
                         "file": {
@@ -117,8 +124,9 @@
                 "id": "7"
             },
             "fields": {
-                "title": "table",
+                "title": "Sele",
                 "price": 33.99,
+                "description": "Sele i syntetmaterial. Passar större hundar.",
                 "image": {
                     "fields": {
                         "file": {

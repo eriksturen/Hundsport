@@ -26,10 +26,10 @@ class Products {
             let data = await result.json();
             let products = data.items;
             products = products.map(item => {
-                const { title, price } = item.fields;
+                const { title, price, description } = item.fields;
                 const { id } = item.sys;
                 const image = item.fields.image.fields.file.url;
-                return { title, price, id, image };
+                return { title, price, description, id, image };
             });
             return products;
         } catch (error) {
@@ -107,6 +107,7 @@ function createModal(id) {
                 </div>
                 <div class="modal-body">
                     <p>${products[id].title}</p>
+                    <p>${products[id].description}</p>
                     <p>${products[id].price}</p>
                 </div>
                 <div class="modal-footer">
