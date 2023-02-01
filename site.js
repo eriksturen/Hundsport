@@ -41,8 +41,7 @@ class Products {
 // display products - responsible for getting all items returned from Products and displaying them
 class UI {
     displayProducts(products) {
-        let i;
-        for (i = 0; i < products.length; i++) {
+        for (let i = 0; i < products.length; i++) {
             const prod = document.createElement("div");
             prod.innerHTML = `
             <article class="product">
@@ -92,9 +91,9 @@ class UI {
         }
     }
 }
-async function createModal(id) {
-    const productObject = new Products();
-    const products = await productObject.getProducts();
+function createModal(id) {
+    // The doubleclick problem on the product modal was becasue the product list was read again in that function. It's unnecessary because it's already stored in the local storage - when productlist is gotten from there instead it works on first click
+    const products = JSON.parse(localStorage.getItem("products"));
     productModal.innerHTML = `
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
