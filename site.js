@@ -13,6 +13,8 @@ const productModal = document.querySelector('.product-info-modal');
 
 // this is main cart variable 
 let cart = [];
+//buttons 
+let buttonsDOM = [];
 
 // this class reformats the data from products.json.
 // the products file has a weird format becasue of the contentful CMS to be used later 
@@ -67,9 +69,26 @@ class UI {
 
     }
     getBagButtons() {
-        const buttons = [...document.querySelectorAll(".bag-btn")];
+        const buttons = document.getElementsByClassName("bag-btn");
+        buttonsDOM = buttons;
         for (let i = 0; i < buttons.length; i++) {
-
+            const id = buttons[i].getAttribute('data');
+            let inCart = cart.find(item => item.id === id);
+            if (inCart) {
+                buttons[i].innerText = "Redan i korgen";
+                buttons[i].disabled = true;
+            }
+            buttons[i].addEventListener('click', (event) => {
+                event.target.innerText = "I korgen";
+                event.target.disabled = true;
+                //get product from products in local storage
+                let cartItem = Storage.getProduct(id);
+                console.log(cartItem);
+                // add product to cart in storage
+                // save cart in local storage
+                // set cart values
+                // show cart 
+            });
         }
     }
 }
@@ -106,7 +125,10 @@ class Storage {
     static saveProduct(products) {
         localStorage.setItem("products", JSON.stringify(products))
     };
-
+    static getProduct(id) {
+        let products = JSON.parse(localStorage.getItem("products"));
+        return products.find(product => product.id === id);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
