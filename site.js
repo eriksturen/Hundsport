@@ -1,114 +1,151 @@
 // CART AND PRODUCTS SECTION 
-const cartBtn = document.querySelector('.cart-btn');
-const closeCartBtn = document.querySelector('.cart-btn');
-const clearCartBtn = document.querySelector('.clear-cart');
-const cartDOM = document.querySelector('.cart');
-const cartOverlay = document.querySelector('.cart-overlay');
-const cartItems = document.querySelector('.cart-items');
-const cartTotal = document.querySelector('.cart-total');
-const cartContent = document.querySelector('.cart-content');
-const productsDOM = document.querySelector('.products-center');
+class Product {
+    constructor(title, price, description, image) {
+        this.title = title;
+        this.price = price;
+        this.description = description;
+        this.image = image;
+    }
+}
+// this is main cart variable
 
-const productModal = document.querySelector('.product-info-modal');
+const productList = document.querySelector("#productList")
+const products = [];
+const productModal = document.querySelector(".product-info-modal");
 
-// this is main cart variable 
+
+async function startShop() {
+    const response = await fetch("./products/products.json");
+    const productsJson = await response.json();
+    console.log(productsJson.items)
+    for (const product of productsJson.items) {
+        products.push(
+            new Product(product.title, product.price, product.description, product.image)
+        );
+    }
+    createProductCards();
+}
+
 let cart = [];
 //buttons 
-let buttonsDOM = [];
 
-// this class reformats the data from products.json.
-// the products file has a weird format becasue of the contentful CMS to be used later 
-// the reformatting is done using destructuring in the map function 
-class Products {
-    async getProducts() {
-        try {
-            let result = await fetch('/products/products.json');
-            let data = await result.json();
-            let products = data.items;
-            products = products.map(item => {
-                const { title, price, description } = item.fields;
-                const { id } = item.sys;
-                const image = item.fields.image.fields.file.url;
-                return { title, price, description, id, image };
-            });
-            return products;
-        } catch (error) {
-            console.log(error);
-        }
-    }
-}
 
-// display products - responsible for getting all items returned from Products and displaying them
-class UI {
-    displayProducts(products) {
-        for (let i = 0; i < products.length; i++) {
-            const prod = document.createElement("div");
-            prod.innerHTML = `
-            <article class="product">
-            <div class="card mx-auto d-block border-secondary mb-3" style="width: 18rem;">
-            <img src=${products[i].image} class="card-img-top" style="width: 50%;">
-                <div class="card-body">
-                <h5 class="card-title">${products[i].title}</h5>
-                <p class="card-text">This is a product card <br>
-                    ${products[i].price} kr
-                 </p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" 
-                    data=${products[i].id} data-target="#exampleModal" 
-                        onclick="createModal(${products[i].id})">
-                        Mer info
-                    </button>
-                    <button href="#" class="btn btn-primary bag-btn" data=${products[i].id}>Lägg i korgen</button>
-                </div>
-                </div>
-            </article>
-            `
-            productsDOM.appendChild(prod)
-            // send products[i].id to a function that creates a modal with more info about that product, hook that up to the ShowModalButton somehow
+function createProductCards() {
+    for (const product of products) {
+        // Create elements, set text, add classes
+        const card = document.createElement("li");
+        const cardTitle = document.createElement("div");
+        const cardBody = document.createElement("div");
+        const cardText = document.createElement("p");
+        const cardImage = document.createElement("img");
+        const cardFooter = document.createElement("div");
+        const modalButton = document.createElement("button");
+        const cartButton = document.createElement("button");
+
+        card.classList.add("card", "mx-auto", "d-block", "border-secondary", "mb-3");
+        cardTitle.classList.add("card-title");
+        cardBody.classList.add("card-body");
+        cardText.classList.add("card-text");
+        cardFooter.classList.add("footer");
+        cardImage.classList.add("card-img-top");
+        cardImage.style.width = "50%";
+        modalButton.classList.add("btn", "btn-primary", "m-2");
+        cartButton.classList.add("btn", "btn-primary", "bag-btn", "m-2");
+
+        cardTitle.innerText = product.title;
+        cardImage.src = product.image;
+        cardText.innerText = product.price;
+        modalButton.innerText = "Mer info";
+        cartButton.innerText = "Lägg i korgen";
+
+        // Set up events for buttons
+        modalButton.onclick = () => {
+            createModal(product);
         };
 
-    }
-    getBagButtons() {
-        const buttons = document.getElementsByClassName("bag-btn");
-        buttonsDOM = buttons;
-        for (let i = 0; i < buttons.length; i++) {
-            const id = buttons[i].getAttribute('data');
-            let inCart = cart.find(item => item.id === id);
-            if (inCart) {
-                buttons[i].innerText = "Redan i korgen";
-                buttons[i].disabled = true;
-            }
-            buttons[i].addEventListener('click', (event) => {
-                event.target.innerText = "I korgen";
-                event.target.disabled = true;
-                //get product from products in local storage
-                let cartItem = Storage.getProduct(id);
-                console.log(cartItem);
-                // add product to cart in storage
-                // save cart in local storage
-                // set cart values
-                // show cart 
-            });
-        }
+        cartButton.onclick = () => {
+            addToCart(product);
+        };
+
+        // Add elements to card list 
+        cardFooter.append(modalButton, cartButton);
+        cardBody.append(cardTitle, cardText);
+        card.append(cardImage, cardBody, cardFooter)
+        productList.append(card);
     }
 }
-function createModal(id) {
+
+// function createModal(product) {
+//     const productModal = document.querySelector("#productModal");
+//     const modal = document.createElement("div");
+//     const modalDialog = document.createElement("div");
+//     const modalContent = document.createElement("div");
+//     const modalHeader = document.createElement("div");
+//     const modalTitle = document.createElement("h5");
+//     const modalBody = document.createElement("div");
+//     const modalFooter = document.createElement("div");
+//     const closeButton = document.createElement("button");
+//     const cartButton = document.createElement("button");
+
+//     const modalBodyTitle = document.createElement("p");
+//     const modalBodyDescription = document.createElement("p");
+//     const modalBodyPrice = document.createElement("p");
+
+
+//     modal.classList.add("modal");
+//     // modal.role = "dialog";
+//     // modal.tabIndex = "-1";
+//     // modal.ariaHidden = "true";
+//     modalDialog.classList.add("modal-dialog");
+//     modalDialog.role = "document";
+//     modalContent.classList.add("modal-content");
+//     modalHeader.classList.add("modal-header");
+//     modalTitle.classList.add("modal-title");
+//     modalBody.classList.add("modal-body");
+//     modalFooter.classList.add("modal-footer");
+//     closeButton.classList.add("close", "btn", "btn-primary");
+//     cartButton.classList.add("close", "btn", "btn-primary");
+
+//     closeButton.onclick = () => {
+//         $('#myModal').modal('hide');
+//     }
+
+//     modalTitle.innerText = product.title;
+//     modalBodyTitle.innerText = product.title;
+//     modalBodyDescription.innerText = product.description;
+//     modalBodyPrice.innerText = product.price;
+//     closeButton.innerText = "Stäng";
+//     cartButton.innerText = "Lägg i korgen";
+
+//     modalBody.append(modalBodyTitle, modalBodyDescription, modalBodyPrice);
+//     modalFooter.append(closeButton, cartButton);
+//     modalHeader.append(modalTitle);
+//     modalContent.append(modalHeader, modalBody, modalFooter);
+//     modalDialog.append(modalContent);
+//     modal.append(modalDialog);
+
+//     console.log(modal.innerHTML);
+//     productModal.firstChild = modal;
+// }
+
+// TODO change this to similar to above - take in product instead 
+function createModal(product) {
     // The doubleclick problem on the product modal was becasue the product list was read again in that function. It's unnecessary because it's already stored in the local storage - when productlist is gotten from there instead it works on first click
-    const products = JSON.parse(localStorage.getItem("products"));
     productModal.innerHTML = `
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">${products[id].title}</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">${product.title}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>${products[id].title}</p>
-                    <p>${products[id].description}</p>
-                    <p>${products[id].price}</p>
+                    <p>${product.title}</p>
+                    <p>${product.description}</p>
+                    <p>${product.price}</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
@@ -118,6 +155,7 @@ function createModal(id) {
         </div>
     </div>
     `
+    console.log(productModal.innerHTML);
 }
 
 // local storage class 
@@ -131,42 +169,21 @@ class Storage {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    const ui = new UI();
-    const products = new Products();
-
-    // get all products then pass then off to the ui class which handles displaying correctly
-    products.getProducts().then(products => {
-        ui.displayProducts(products);
-        Storage.saveProduct(products);
-    }).then(() => {
-        ui.getBagButtons();
-    });
-});
+startShop();
 
 
-
-// OLD PRODUCTS SECTION
-// const products = [["Köttfärs", "/images/DogProfile.svg"], ["Bitkudde", "/images/DogProfile.svg"], ["Koppel", "/images/dog-collar.svg"], ["Storpack märgben", "/images/DogProfile.svg"], ["Tennisboll", "/images/DogProfile.svg"], ["Lyftsele", "/images/dog-collar.svg"], ["Leversnittar", "/images/DogProfile.svg"], ["Gummigris", "/images/DogProfile.svg"], ["Kamerasele", "/images/dog-collar.svg"]];
-// const list = document.getElementById("shopProducts");
-
-// const cardList = document.getElementById("shopProductsCards");
-// for (i = 0; i < products.length; i++) {
-//     const card = document.createElement("div");
-//     card.innerHTML = `
-//         <div class="card mx-auto d-block border-secondary mb-3" style="width: 18rem;">
-//             <img src=${products[i][1]} class="card-img-top" style="width:50%;" alt="...">
-//             <div class="card-body">
-//                 <h5 class="card-title">${products[i][0]}</h5>
-//                 <p class="card-text">This is a product card <br>
-//                     333 kr
-//                 </p>
-//                 <a href="#" class="btn btn-primary">Mer info</a>
-//                 <a href="#" class="btn btn-primary">Lägg i korgen</a>
-//             </div>
+// {/* <div class="modal-dialog">
+//     <div class="modal-content">
+//         <div class="modal-header"><h5 class="modal-title">Köttfärs på tunna</h5>
 //         </div>
-//   `
-//     cardList.appendChild(card);
-// }
-
-// console.log(cardList);
+//         <div class="modal-body">
+//             <p>Köttfärs på tunna</p>
+//             <p>Stor tunna med prima köttfärs. Mängdrabatt!</p>
+//             <p>10.99</p>
+//         </div>
+//         <div class="modal-footer">
+//             <button class="close btn btn-primary">Stäng</button>
+//             <button class="close btn btn-primary">Lägg i korgen</button>
+//         </div>
+//     </div>
+// </div> */}

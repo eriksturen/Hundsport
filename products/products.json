@@ -1,140 +1,52 @@
 {
     "items": [
         {
-            "sys": {
-                "id": "0"
-            },
-            "fields": {
-                "title": "Köttfärs på tunna",
-                "price": 10.99,
-                "description": "Stor tunna med prima köttfärs. Mängdrabatt!",
-                "image": {
-                    "fields": {
-                        "file": {
-                            "url": "./images/DogProfile.svg"
-                        }
-                    }
-                }
-            }
+            "title": "Köttfärs på tunna",
+            "price": 10.99,
+            "description": "Stor tunna med prima köttfärs. Mängdrabatt!",
+            "image": "./images/DogProfile.svg"
         },
         {
-            "sys": {
-                "id": "1"
-            },
-            "fields": {
-                "title": "Röd kong",
-                "price": 12.99,
-                "description": "Vanlig röd kong. Klipp i bitar för specialsöket.",
-                "image": {
-                    "fields": {
-                        "file": {
-                            "url": "./images/DogProfile.svg"
-                        }
-                    }
-                }
-            }
+            "title": "Röd kong",
+            "price": 12.99,
+            "description": "Vanlig röd kong. Klipp i bitar för specialsöket.",
+            "image": "./images/DogProfile.svg"
         },
         {
-            "sys": {
-                "id": "2"
-            },
-            "fields": {
-                "title": "Bitkudde",
-                "price": 12.99,
-                "description": "Bitkudde från gappay i jute.",
-                "image": {
-                    "fields": {
-                        "file": {
-                            "url": "./images/DogProfile.svg"
-                        }
-                    }
-                }
-            }
+            "title": "Bitkudde",
+            "price": 12.99,
+            "description": "Bitkudde från gappay i jute.",
+            "image": "./images/DogProfile.svg"
         },
         {
-            "sys": {
-                "id": "3"
-            },
-            "fields": {
-                "title": "Halsband",
-                "price": 22.99,
-                "description": "Läderhalsband för mellanstora hundar.",
-                "image": {
-                    "fields": {
-                        "file": {
-                            "url": "./images/DogProfile.svg"
-                        }
-                    }
-                }
-            }
+            "title": "Halsband",
+            "price": 22.99,
+            "description": "Läderhalsband för mellanstora hundar.",
+            "image": "./images/DogProfile.svg"
         },
         {
-            "sys": {
-                "id": "4"
-            },
-            "fields": {
-                "title": "Långt koppel",
-                "price": 88.99,
-                "description": "Extra långt koppel i syntet",
-                "image": {
-                    "fields": {
-                        "file": {
-                            "url": "./images/DogProfile.svg"
-                        }
-                    }
-                }
-            }
+            "title": "Långt koppel",
+            "price": 88.99,
+            "description": "Extra långt koppel i syntet",
+            "image": "./images/DogProfile.svg"
         },
         {
-            "sys": {
-                "id": "5"
-            },
-            "fields": {
-                "title": "Kort koppel",
-                "price": 32.99,
-                "description": "Kortare syntetkoppel, smidigt i stan.",
-                "image": {
-                    "fields": {
-                        "file": {
-                            "url": "./images/DogProfile.svg"
-                        }
-                    }
-                }
-            }
+            "title": "Kort koppel",
+            "price": 32.99,
+            "description": "Kortare syntetkoppel, smidigt i stan.",
+            "image": "./images/DogProfile.svg"
         },
         {
-            "sys": {
-                "id": "6"
-            },
-            "fields": {
-                "title": "Kycklinghals",
-                "price": 45.99,
-                "description": "Frysta kycklinghalsar. Mycket populärt stödfoder.",
-                "image": {
-                    "fields": {
-                        "file": {
-                            "url": "./images/DogProfile.svg"
-                        }
-                    }
-                }
-            }
+            "title": "Kycklinghals",
+            "price": 45.99,
+            "description": "Frysta kycklinghalsar. Mycket populärt stödfoder.",
+            "image": "./images/DogProfile.svg"
         },
         {
-            "sys": {
-                "id": "7"
-            },
-            "fields": {
-                "title": "Sele",
-                "price": 33.99,
-                "description": "Sele i syntetmaterial. Passar större hundar.",
-                "image": {
-                    "fields": {
-                        "file": {
-                            "url": "./images/DogProfile.svg"
-                        }
-                    }
-                }
-            }
+            "title": "Sele",
+            "price": 33.99,
+            "description": "Sele i syntetmaterial. Passar större hundar.",
+            "image": "./images/DogProfile.svg"
         }
     ]
 }

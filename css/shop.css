@@ -152,6 +152,11 @@ body {
 /* --------------- End of Hero ---------------- */
 /* --------------- Products ---------------- */
 
+
+.card-img-top-small {
+    width: 50%;
+}
+
 .products {
     padding: 0rem 0;
 }
@@ -165,11 +170,11 @@ body {
 }
 
 .products-center {
-    max-width: 1170px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1.5rem;
     grid-row-gap: 2rem;
+    margin: 0;
 }
 
 .img-container {
