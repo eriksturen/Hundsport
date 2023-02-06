@@ -78,6 +78,8 @@ function createProductCards() {
 
 function createModal(product) {
     const productModal = document.querySelector("#productModal");
+    // Clear old modal if it's there
+    productModal.firstChild.remove();
     const modal = document.createElement("div");
     const modalDialog = document.createElement("div");
     const modalContent = document.createElement("div");
