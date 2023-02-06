@@ -145,7 +145,7 @@ function cartModal() {
 function createProductCards() {
     for (const product of products) {
         // Create elements, set text, add classes
-        const card = document.createElement("li");
+        const card = document.createElement("div");
         const cardTitle = document.createElement("div");
         const cardBody = document.createElement("div");
         const cardText = document.createElement("p");
@@ -166,6 +166,7 @@ function createProductCards() {
 
         cardTitle.innerText = product.title;
         cardImage.src = product.image;
+        cardImage.alt = "https://sv.wikipedia.org/wiki/404_error#/media/Fil:Camino-404.png"
         cardText.innerText = `${product.price} kr`;
         modalButton.innerText = "Mer info";
         cartButton.innerText = "Lägg i korgen";
