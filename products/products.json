@@ -2,49 +2,49 @@
     "items": [
         {
             "title": "Köttfärs på tunna",
-            "price": 10.99,
+            "price": 399,
             "description": "Stor tunna med prima köttfärs. Mängdrabatt!",
             "image": "./images/DogProfile.svg"
         },
         {
             "title": "Röd kong",
-            "price": 12.99,
+            "price": 95,
             "description": "Vanlig röd kong. Klipp i bitar för specialsöket.",
             "image": "./images/DogProfile.svg"
         },
         {
             "title": "Bitkudde",
-            "price": 12.99,
+            "price": 129,
             "description": "Bitkudde från gappay i jute.",
             "image": "./images/DogProfile.svg"
         },
         {
             "title": "Halsband",
-            "price": 22.99,
+            "price": 75,
             "description": "Läderhalsband för mellanstora hundar.",
             "image": "./images/DogProfile.svg"
         },
         {
             "title": "Långt koppel",
-            "price": 88.99,
+            "price": 88,
             "description": "Extra långt koppel i syntet",
             "image": "./images/DogProfile.svg"
         },
         {
             "title": "Kort koppel",
-            "price": 32.99,
+            "price": 135,
             "description": "Kortare syntetkoppel, smidigt i stan.",
             "image": "./images/DogProfile.svg"
         },
         {
             "title": "Kycklinghals",
-            "price": 45.99,
+            "price": 79,
             "description": "Frysta kycklinghalsar. Mycket populärt stödfoder.",
             "image": "./images/DogProfile.svg"
         },
         {
             "title": "Sele",
-            "price": 33.99,
+            "price": 299,
             "description": "Sele i syntetmaterial. Passar större hundar.",
             "image": "./images/DogProfile.svg"
         }
