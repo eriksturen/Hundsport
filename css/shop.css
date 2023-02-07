@@ -107,6 +107,9 @@ body {
 
 .card-img-top-small {
     width: 50%;
+    max-height: 150px;
+    max-width: 150px;
+
 }
 
 .products {

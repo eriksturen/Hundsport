@@ -35,10 +35,11 @@
     <!-- The sidebar -->
     <div class="navbar">
         <div class="navbar-center">
-            <a href="index.html">Hem</a>
-            <a class="active" href="shop.html">Produkter</a>
-            <a href="contact.html">Om Oss</a>
-            <a href="#" onclick="openCart()" id="navbar-cart-button"><i class="fa fa-shopping-cart"></i> Kundkorg</a>
+            <a class="btn btn-primary" href="index.html">Hem</a>
+            <a class="btn btn-primary" class="active" href="shop.html">Produkter</a>
+            <a class="btn btn-primary" href="contact.html">Om Oss</a>
+            <a class="btn btn-primary" href="#" onclick="openCart()" id="navbar-cart-a"><i
+                    class="fa fa-shopping-cart"></i> Kundkorg</a>
         </div>
 
 
@@ -63,18 +64,15 @@
         <!-- end of products -->
 
         <!-- product info modal -->
-        <!-- Modal -->
+        <!-- initialized in site.js when product modal is pressed -->
         <div class="product-info-modal" , id="productModal">
-
         </div>
-
         <!-- end of product info modal -->
 
-
-
         <!-- cart  -->
+        <!-- initialized in site.js when cart button is pressed -->
+        <!-- Make sure modal div is empty here so javascript empties it correctly when showing cart -->
         <div class="shopping-cart-modal" id="shopping-cart-modal">
-            <!-- initialized in site.js when cart button is pressed -->
         </div>
 
 </body>

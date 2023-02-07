@@ -27,7 +27,6 @@ async function startShop() {
 function openCart() {
     cartModal();
     $('#cartModal').modal('show');
-    console.log("print cart")
 }
 
 // Look in localStorage - if cart is there, load that one, otherwise initialize
@@ -139,7 +138,6 @@ function cartModal() {
 
     modal.id = "cartModal";
     cartModal.appendChild(modal);
-    console.log(cartModal.innerHTML);
 }
 
 function createProductCards() {
@@ -159,8 +157,7 @@ function createProductCards() {
         cardBody.classList.add("card-body");
         cardText.classList.add("card-text");
         cardFooter.classList.add("footer");
-        cardImage.classList.add("card-img-top");
-        cardImage.style.width = "50%";
+        cardImage.classList.add("card-img-top", "card-img-top-small");
         modalButton.classList.add("btn", "btn-primary", "m-2");
         cartButton.classList.add("btn", "btn-primary", "bag-btn", "m-2");
 
@@ -198,6 +195,7 @@ function createModal(product) {
     const modalContent = document.createElement("div");
     const modalHeader = document.createElement("div");
     const modalTitle = document.createElement("h5");
+    const modalImage = document.createElement("img");
     const modalBody = document.createElement("div");
     const modalFooter = document.createElement("div");
     const closeButton = document.createElement("button");
@@ -216,6 +214,7 @@ function createModal(product) {
     modalDialog.role = "document";
     modalContent.classList.add("modal-content");
     modalHeader.classList.add("modal-header");
+    modalImage.classList.add("card-img-top");
     modalTitle.classList.add("modal-title");
     modalBody.classList.add("modal-body");
     modalFooter.classList.add("modal-footer");
@@ -235,25 +234,25 @@ function createModal(product) {
     modalBodyTitle.innerText = product.title;
     modalBodyDescription.innerText = product.description;
     modalBodyPrice.innerText = `${product.price} kr`;
+    modalImage.src = product.image;
+    modalImage.alt = "https://sv.wikipedia.org/wiki/404_error#/media/Fil:Camino-404.png";
     closeButton.innerText = "Stäng";
     cartButton.innerText = "Lägg i korgen";
 
     modalBody.append(modalBodyTitle, modalBodyDescription, modalBodyPrice);
     modalFooter.append(closeButton, cartButton);
     modalHeader.append(modalTitle);
-    modalContent.append(modalHeader, modalBody, modalFooter);
+    modalContent.append(modalHeader, modalImage, modalBody, modalFooter);
     modalDialog.append(modalContent);
     modal.appendChild(modalDialog);
 
 
     modal.id = "exampleModal";
     productModal.appendChild(modal);
-    console.log(productModal.innerHTML);
 }
 
 function addToCart(product) {
     cart.push(product);
-    console.log(cart);
 }
 
 
@@ -270,34 +269,3 @@ class Storage {
 
 startShop();
 
-
-// OLD MODAL FUNCTION
-// TODO change this to similar to above - take in product instead
-// function createModal(product) {
-//     // The doubleclick problem on the product modal was becasue the product list was read again in that function. It's unnecessary because it's already stored in the local storage - when productlist is gotten from there instead it works on first click
-//     productModal.innerHTML = `
-//         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-//         aria-hidden="true">
-//         <div class="modal-dialog" role="document">
-//             <div class="modal-content">
-//                 <div class="modal-header">
-//                     <h5 class="modal-title" id="exampleModalLabel">${product.title}</h5>
-//                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-//                         <span aria-hidden="true">&times;</span>
-//                     </button>
-//                 </div>
-//                 <div class="modal-body">
-//                     <p>${product.title}</p>
-//                     <p>${product.description}</p>
-//                     <p>${product.price}</p>
-//                 </div>
-//                 <div class="modal-footer">
-//                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
-//                     <button type="button" class="btn btn-primary">Lägg i korgen</button>
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-//     `
-//     console.log(productModal.innerHTML);
-// }
