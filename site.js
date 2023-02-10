@@ -1,10 +1,11 @@
 // CART AND PRODUCTS SECTION 
 class Product {
-    constructor(title, price, description, image) {
+    constructor(title, price, description, image_large, image_small) {
         this.title = title;
         this.price = price;
         this.description = description;
-        this.image = image;
+        this.image_large = image_large;
+        this.image_small = image_small;
     }
 }
 
@@ -18,7 +19,7 @@ async function startShop() {
     const productsJson = await response.json();
     for (const product of productsJson.items) {
         products.push(
-            new Product(product.title, product.price, product.description, product.image)
+            new Product(product.title, product.price, product.description, product.image_large, product.image_small)
         );
     }
     createProductCards();
@@ -162,7 +163,7 @@ function createProductCards() {
         cartButton.classList.add("btn", "btn-primary", "bag-btn", "m-2");
 
         cardTitle.innerText = product.title;
-        cardImage.src = product.image;
+        cardImage.src = product.image_small;
         cardImage.alt = "https://sv.wikipedia.org/wiki/404_error#/media/Fil:Camino-404.png"
         cardText.innerText = `${product.price} kr`;
         modalButton.innerText = "Mer info";
@@ -234,7 +235,7 @@ function createModal(product) {
     modalBodyTitle.innerText = product.title;
     modalBodyDescription.innerText = product.description;
     modalBodyPrice.innerText = `${product.price} kr`;
-    modalImage.src = product.image;
+    modalImage.src = product.image_large;
     modalImage.alt = "https://sv.wikipedia.org/wiki/404_error#/media/Fil:Camino-404.png";
     closeButton.innerText = "Stäng";
     cartButton.innerText = "Lägg i korgen";

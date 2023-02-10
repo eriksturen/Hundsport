@@ -3,6 +3,7 @@
 :root {
   --primaryColor: #4D7E3E;
   --primaryLight: #C9EFC7;
+  --accent: #2d4b24;
   --mainWhite: #fff;
   --mainBlack: #222222;
   --mainGrey: #ececec;
@@ -111,47 +112,11 @@ hr {
   padding-bottom: 100px;
 }
 
-.dog_img {
-  border-radius: 0%;
-  width: 20%;
-  float: left;
-  margin-right: 30px;
-}
-
-.food_img {
-  border-radius: 0%;
-  width: 15%;
-  float: right;
-  margin-left: 30px;
-}
-
-.collar_img {
-  border-radius: 0%;
-  width: 15%;
-  float: left;
-  margin-right: 30px;
-
-}
-
-.contact-me {
-  background-color: var(--primaryLight);
-  background-image: url("/images/wave-haikei.svg");
-  background-size: cover;
-  line-height: 2;
-  color: var(--primaryColor);
-
-}
-
 .bottom {
-  background-color: var(--primaryColor);
+  background-color: var(--accent);
   line-height: 3;
   font-size: 0.8rem;
 }
-
-.pro {
-  text-decoration: underline;
-}
-
 
 .h1-primary {
   color: var(--mainBlack);
@@ -160,4 +125,14 @@ hr {
 .h2-primary {
   color: var(--mainBlack);
   padding: 3rem 0;
+}
+
+@media screen and (max-width: 400px) {
+
+  .title-img {
+    align-items: center;
+    height: 80px;
+    width: 350px;
+  }
+
 }

@@ -7,11 +7,11 @@
     background-color: var(--primaryColor);
     background-image: url("/images/shop-waves.svg");
     background-size: cover;
-    min-height: 2000px;
+    min-height: 1500px;
 }
 
 .contact-footer {
-    background-color: #4D7E3E;
+    background-color: #2d4b24;
 }
 
 .h1-contact {
@@ -30,4 +30,12 @@
     /* The height is 400 pixels */
     width: 100%;
     /* The width is the width of the web page */
+}
+
+html,
+body,
+#map_canvas {
+    margin: 0;
+    padding: 0;
+    height: 100%
 }

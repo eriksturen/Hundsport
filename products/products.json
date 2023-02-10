@@ -4,55 +4,64 @@
             "title": "Standardt normal 13kg",
             "price": 399,
             "description": "Standardt är ett naturligt foder med lågt spannmålsinnehåll.",
-            "image": "https://cdn.abicart.com/shop/ws66/64266/art66/h4795/176574795-origpic-353d90.jpg?max-width=1080&max-height=1080&quality=80&resize=crop"
+            "image_large": "/images/standardt_large.webp",
+            "image_small": "/images/standardt_small.webp"
         },
         {
             "title": "Röd kong",
             "price": 95,
             "description": "Vanlig röd kong. Klipp i bitar för specialsöket.",
-            "image": "https://cdn.abicart.com/shop/ws66/64266/art66/h9116/123639116-origpic-5be986.jpg?max-width=1080&max-height=1080&quality=80&resize=crop"
+            "image_large": "/images/kong_large.webp",
+            "image_small": "/images/kong_small.webp"
         },
         {
             "title": "Bitkudde",
             "price": 599,
             "description": "Bitkudde från gappay i jute.",
-            "image": "https://cdn.abicart.com/shop/images/122437098-origpic-2a2c95/ws66/64266/art66/h7098/2919-60dda55931a29.jpg?max-width=1080&max-height=1080&quality=80&resize=crop"
+            "image_large": "/images/bitkudde_large.webp",
+            "image_small": "/images/bitkudde_small.webp"
         },
         {
             "title": "Halsband",
             "price": 75,
             "description": "Läderhalsband för mellanstora hundar.",
-            "image": "https://cdn.abicart.com/shop/ws66/64266/art66/h8727/181528727-origpic-dabaac.jpg?max-width=1080&max-height=1080&quality=80&resize=crop"
+            "image_large": "/images/halsband_large.webp",
+            "image_small": "/images/halsband_small.webp"
         },
         {
             "title": "Långt koppel",
             "price": 88,
             "description": "Extra långt koppel i syntet",
-            "image": "https://cdn.abicart.com/shop/ws66/64266/art66/h8636/123848636-origpic-d15e58.jpg?max-width=1080&max-height=1080&quality=80&resize=crop"
+            "image_large": "images/leash_long_large.webp",
+            "image_small": "images/leash_long_small.webp"
         },
         {
             "title": "Kort koppel",
             "price": 135,
             "description": "Kortare syntetkoppel, vid påvis under sökträning.",
-            "image": "https://cdn.abicart.com/shop/ws66/64266/art66/h8250/122718250-origpic-1bb620.jpg?max-width=1080&max-height=1080&quality=80&resize=crop"
+            "image_large": "/images/leash_short_large.webp",
+            "image_small": "/images/leash_short_small.webp"
         },
         {
             "title": "Blodmjöl",
             "price": 79,
             "description": "Blodmjöl från nöt. Mycket populärt stödfoder.",
-            "image": "https://cdn.abicart.com/shop/ws66/64266/art66/h1875/186031875-origpic-3d5c08.jpg?max-width=1080&max-height=1080&quality=80&resize=crop"
+            "image_large": "/images/blood_powde_larger.webp",
+            "image_small": "/images/blood_powder_small.webp"
         },
         {
             "title": "Sele",
             "price": 299,
             "description": "Sele i syntetmaterial. Passar större hundar.",
-            "image": "https://cdn.abicart.com/shop/ws66/64266/art66/h9491/172519491-origpic-26f57c.jpg?max-width=1080&max-height=1080&quality=80&resize=crop"
+            "image_large": "/images/harness_large.webp",
+            "image_small": "/images/harness_small.webp"
         },
         {
             "title": "Spårlina",
             "price": 139,
             "description": "Spårlina 15 meter. Ger väldigt fina brännskador i handen när hunden sticker och du står kvar.",
-            "image": "https://cdn.abicart.com/shop/images/123849928-origpic-ccc703/ws66/64266/art66/h9928/Namnl%C3%B6st-3.jpg?max-width=1080&max-height=1080&quality=80&resize=crop"
+            "image_large": "/images/tracking_leash_large.webp",
+            "image_small": "/images/tracking_leash_small.webp"
         }
     ]
 }

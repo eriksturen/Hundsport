@@ -19,7 +19,7 @@
 
 .shop-main {
     background-color: var(--primaryColor);
-    background-image: url("/images/shop-waves.svg");
+    /* background-image: url("/images/shop-waves.svg"); */
     background-size: cover;
     min-height: 1500px;
 }
@@ -38,9 +38,9 @@
 .shop-title-img {
     margin-top: 100px;
     align-items: center;
+    height: 230px;
+    width: 1000px;
 }
-
-@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
 
 * {
     margin: 0;
@@ -104,12 +104,14 @@ body {
 
 /* --------------- Products ---------------- */
 
+.card-img-top {
+    height: 500px;
+    width: 500px;
+}
 
 .card-img-top-small {
-    width: 50%;
-    max-height: 150px;
-    max-width: 150px;
-
+    height: 150px;
+    width: 150px;
 }
 
 .products {
@@ -134,3 +136,31 @@ body {
 }
 
 /* ---------------End of Products ---------------- */
+
+/*  ---------------- Small screens  ---------------*/
+@media screen and (max-width: 400px) {
+    .card-img-top-small {
+        height: 50px;
+        width: 50px;
+    }
+
+    .card-img-top {
+        height: 150px;
+        width: 150px;
+    }
+
+    .products-center {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 1.5rem;
+        grid-row-gap: 2rem;
+        margin: 0;
+    }
+
+    .shop-title-img {
+        margin-top: 100px;
+        align-items: center;
+        height: 80px;
+        width: 350px;
+    }
+}
