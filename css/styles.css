@@ -127,7 +127,7 @@ hr {
   padding: 3rem 0;
 }
 
-@media screen and (width < 900px) {
+@media (width < 900px) {
 
   .title-img {
     align-items: center;

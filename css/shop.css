@@ -136,7 +136,7 @@ body {
 /* ---------------End of Products ---------------- */
 
 /*  ---------------- Small screens  ---------------*/
-@media screen and (width < 900px) {
+@media (width < 900px) {
     .card-img-top-small {
         height: 50px;
         width: 50px;
