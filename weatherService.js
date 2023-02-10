@@ -81,13 +81,12 @@ async function GetWeatherData() {
         const tdPrecip = document.createElement("td");
 
         tdClub.innerText = entry.city;
-        tdMaxTemp.innerText = entry.temp_max;
-        tdMinTemp.innerText = entry.temp_min;
+        tdMaxTemp.innerText = `${entry.temp_max} °C`;
+        tdMinTemp.innerText = `${entry.temp_min} °C`;
         tdSunset.innerText = entry.sunset.toLocaleTimeString("swe");
         tdPrecip.innerText = entry.precip;
 
         tr.append(tdClub, tdMaxTemp, tdMinTemp, tdSunset, tdPrecip);
-        console.log(tr.innerHTML);
         weatherTable.appendChild(tr);
     }
 
