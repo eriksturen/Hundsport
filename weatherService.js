@@ -18,13 +18,17 @@ class Question {
 
 // Api script should save lat/lon to a couple of cities in a list 
 const cities = {
-    Gothenburg: {
+    Göteborg: {
         "lat": 57.71,
         "lon": 11.97
     },
     Stenungsund: {
         "lat": 58.07,
         "lon": 11.82
+    },
+    Karlstad: {
+        "lat": 59.38,
+        "lon": 13.50
     },
     Skara: {
         "lat": 58.39,
@@ -65,13 +69,28 @@ async function GetWeatherData() {
         weatherData.push(weatherObject)
     };
 
-    //To print time: entry.sunset.toLocaleTimeString("")
 
+    //Create an ul list object with a li is then built from each relevant object and passed to the front page initializing more or less like the product list
+    const weatherTable = document.querySelector("#weather-api-table")
     for (const entry of weatherData) {
-        console.log(entry);
+        const tr = document.createElement("tr");
+        const tdClub = document.createElement("td");
+        const tdMaxTemp = document.createElement("td");
+        const tdMinTemp = document.createElement("td");
+        const tdSunset = document.createElement("td");
+        const tdPrecip = document.createElement("td");
+
+        tdClub.innerText = entry.city;
+        tdMaxTemp.innerText = entry.temp_max;
+        tdMinTemp.innerText = entry.temp_min;
+        tdSunset.innerText = entry.sunset.toLocaleTimeString("swe");
+        tdPrecip.innerText = entry.precip;
+
+        tr.append(tdClub, tdMaxTemp, tdMinTemp, tdSunset, tdPrecip);
+        console.log(tr.innerHTML);
+        weatherTable.appendChild(tr);
     }
+
 }
 
 GetWeatherData();
-
-// an ul list object with a li is then built from each relevant object and passed to the front page initializing more or less like the product list
