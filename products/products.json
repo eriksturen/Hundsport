@@ -4,29 +4,29 @@
             "title": "Standardt normal 13kg",
             "price": 399,
             "description": "Standardt är ett naturligt foder med lågt spannmålsinnehåll.",
-            "image_large": "/images/standardt_large.webp",
-            "image_small": "/images/standardt_small.webp"
+            "image_large": "./images/standardt_large.webp",
+            "image_small": "./images/standardt_small.webp"
         },
         {
             "title": "Röd kong",
             "price": 95,
             "description": "Vanlig röd kong. Klipp i bitar för specialsöket.",
-            "image_large": "/images/kong_large.webp",
-            "image_small": "/images/kong_small.webp"
+            "image_large": "./images/kong_large.webp",
+            "image_small": "./images/kong_small.webp"
         },
         {
             "title": "Bitkudde",
             "price": 599,
             "description": "Bitkudde från gappay i jute.",
-            "image_large": "/images/bitkudde_large.webp",
-            "image_small": "/images/bitkudde_small.webp"
+            "image_large": "./images/bitkudde_large.webp",
+            "image_small": "./images/bitkudde_small.webp"
         },
         {
             "title": "Halsband",
             "price": 75,
             "description": "Läderhalsband för mellanstora hundar.",
-            "image_large": "/images/halsband_large.webp",
-            "image_small": "/images/halsband_small.webp"
+            "image_large": "./images/halsband_large.webp",
+            "image_small": "./images/halsband_small.webp"
         },
         {
             "title": "Långt koppel",
@@ -39,29 +39,29 @@
             "title": "Kort koppel",
             "price": 135,
             "description": "Kortare syntetkoppel, vid påvis under sökträning.",
-            "image_large": "/images/leash_short_large.webp",
-            "image_small": "/images/leash_short_small.webp"
+            "image_large": "./images/leash_short_large.webp",
+            "image_small": "./images/leash_short_small.webp"
         },
         {
             "title": "Blodmjöl",
             "price": 79,
             "description": "Blodmjöl från nöt. Mycket populärt stödfoder.",
-            "image_large": "/images/blood_powde_larger.webp",
-            "image_small": "/images/blood_powder_small.webp"
+            "image_large": "./images/blood_powde_larger.webp",
+            "image_small": "./images/blood_powder_small.webp"
         },
         {
             "title": "Sele",
             "price": 299,
             "description": "Sele i syntetmaterial. Passar större hundar.",
-            "image_large": "/images/harness_large.webp",
-            "image_small": "/images/harness_small.webp"
+            "image_large": "./images/harness_large.webp",
+            "image_small": "./images/harness_small.webp"
         },
         {
             "title": "Spårlina",
             "price": 139,
             "description": "Spårlina 15 meter. Ger väldigt fina brännskador i handen när hunden sticker och du står kvar.",
-            "image_large": "/images/tracking_leash_large.webp",
-            "image_small": "/images/tracking_leash_small.webp"
+            "image_large": "./images/tracking_leash_large.webp",
+            "image_small": "./images/tracking_leash_small.webp"
         }
     ]
 }
