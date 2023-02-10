@@ -127,7 +127,7 @@ hr {
   padding: 3rem 0;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (width < 900px) {
 
   .title-img {
     align-items: center;
@@ -135,4 +135,7 @@ hr {
     width: 350px;
   }
 
+  .card-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

@@ -38,8 +38,6 @@
 .shop-title-img {
     margin-top: 100px;
     align-items: center;
-    height: 230px;
-    width: 1000px;
 }
 
 * {
@@ -138,7 +136,7 @@ body {
 /* ---------------End of Products ---------------- */
 
 /*  ---------------- Small screens  ---------------*/
-@media screen and (max-width: 400px) {
+@media screen and (width < 900px) {
     .card-img-top-small {
         height: 50px;
         width: 50px;
@@ -157,10 +155,4 @@ body {
         margin: 0;
     }
 
-    .shop-title-img {
-        margin-top: 100px;
-        align-items: center;
-        height: 80px;
-        width: 350px;
-    }
 }

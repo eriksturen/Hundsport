@@ -30,7 +30,7 @@
   <!-- The Top image -->
   <div class="content">
     <div class="top">
-      <img src="branding/logo/png/logo-color.png" alt="https://freesvg.org/img/1538154274.png">
+      <img class="img-fluid" src="branding/logo/png/logo-color.png" alt="https://freesvg.org/img/1538154274.png">
     </div>
 
     <div class="equipment-info-cards">
@@ -83,23 +83,21 @@
       <div class="p-5">
         <!-- api-container is filled with info via js -->
         <div class="container">
-          <div class="card mx-auto d-block">
-            <h4 class="card-header">Vädret idag på de viktigaste Brukshundklubbarna</h4>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Klubb</th>
-                  <th scope="col">Max temp</th>
-                  <th scope="col">Min temp</th>
-                  <th scope="col">Solnedgång</th>
-                  <th scope="col">Nederbörd (mm)</th>
-                </tr>
-              </thead>
-              <tbody id="weather-api-table">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Klubb</th>
+                <th scope="col">Max temp</th>
+                <th scope="col">Min temp</th>
+                <!-- <th scope="col">Solnedgång</th> -->
+                <th scope="col">Nederbörd (mm)</th>
+              </tr>
+            </thead>
+            <tbody id="weather-api-table">
 
-              </tbody>
-            </table>
-          </div>
+            </tbody>
+          </table>
+
 
         </div>
       </div>

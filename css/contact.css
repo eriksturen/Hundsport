@@ -1,3 +1,7 @@
+h2 {
+    text-align: center;
+}
+
 .contact-title {
     margin-top: -60px;
     background-color: #C9EFC7;
@@ -18,6 +22,7 @@
     margin-top: 0;
     color: #4D7E3E;
 }
+
 
 .contact-title-img {
     margin-top: 50px;

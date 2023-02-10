@@ -77,16 +77,16 @@ async function GetWeatherData() {
         const tdClub = document.createElement("td");
         const tdMaxTemp = document.createElement("td");
         const tdMinTemp = document.createElement("td");
-        const tdSunset = document.createElement("td");
+        // const tdSunset = document.createElement("td");
         const tdPrecip = document.createElement("td");
 
         tdClub.innerText = entry.city;
         tdMaxTemp.innerText = `${entry.temp_max} °C`;
         tdMinTemp.innerText = `${entry.temp_min} °C`;
-        tdSunset.innerText = entry.sunset.toLocaleTimeString("swe");
+        // tdSunset.innerText = entry.sunset.toLocaleTimeString("swe");
         tdPrecip.innerText = entry.precip;
 
-        tr.append(tdClub, tdMaxTemp, tdMinTemp, tdSunset, tdPrecip);
+        tr.append(tdClub, tdMaxTemp, tdMinTemp, tdPrecip);
         weatherTable.appendChild(tr);
     }
 
