@@ -21,6 +21,7 @@
 
 .contact-title-img {
     margin-top: 50px;
+    align-items: center;
 }
 
 /* GOOGLE MAPS */
@@ -30,12 +31,4 @@
     /* The height is 400 pixels */
     width: 100%;
     /* The width is the width of the web page */
-}
-
-html,
-body,
-#map_canvas {
-    margin: 0;
-    padding: 0;
-    height: 100%
 }
