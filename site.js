@@ -215,7 +215,7 @@ function createModal(product) {
     modalDialog.role = "document";
     modalContent.classList.add("modal-content");
     modalHeader.classList.add("modal-header");
-    modalImage.classList.add("card-img-top");
+    modalImage.classList.add("card-img-top", "center");
     modalTitle.classList.add("modal-title");
     modalBody.classList.add("modal-body");
     modalFooter.classList.add("modal-footer");

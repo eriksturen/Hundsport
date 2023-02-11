@@ -34,16 +34,18 @@
     </div>
 
     <div class="equipment-info-cards">
-      <div class="intro-row">
-        <br>
-        <div class="container">
-          <div class="card mx-auto d-block text-center title-card">
+
+      <br>
+      <div class="container">
+        <div class="card mx-auto d-block text-center m-5">
+          <div class="card-body">
             <h2>Utrustning för brukshundar</h2>
             <br>
             <h3>Pålitliga och högkvalitativa produkter för arbetande hundar</h3>
           </div>
         </div>
       </div>
+
 
       <!-- Three divs with info categories: -->
       <div class="container">
@@ -80,27 +82,30 @@
 
         </div>
       </div>
-      <div class="p-5">
-        <!-- api-container is filled with info via js -->
-        <div class="container">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Klubb</th>
-                <th scope="col">Max temp</th>
-                <th scope="col">Min temp</th>
-                <!-- <th scope="col">Solnedgång</th> -->
-                <th scope="col">Nederbörd (mm)</th>
-              </tr>
-            </thead>
-            <tbody id="weather-api-table">
+      <!-- api-container is filled with info via js -->
+      <div class="container">
+        <div class="card mx-auto d-block mt-5">
+          <div class="card-header">Vädret idag på de viktigaste Brukshundklubbarna</div>
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Klubb</th>
+                  <th scope="col">Max temp</th>
+                  <th scope="col">Min temp</th>
+                  <!-- <th scope="col">Solnedgång</th> -->
+                  <th scope="col">Nederbörd (mm)</th>
+                </tr>
+              </thead>
+              <tbody id="weather-api-table">
 
-            </tbody>
-          </table>
-
-
+              </tbody>
+            </table>
+          </div>
         </div>
+
       </div>
+
     </div>
 
     <!-- Short contact info  -->
